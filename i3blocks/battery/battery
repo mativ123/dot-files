@@ -1,0 +1,28 @@
+#!/bin/bash
+percentage=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | cut -c25-)
+
+if [ $percentage == "100%" ]; then
+    label=""
+elif [ $percentage \< "25" ]; then
+    label=""
+elif [ $percentage \< "50" ]; then
+    label=""
+elif [ $percentage \< "75" ]; then
+    label=""
+elif [ $percentage \< "99" ]; then
+    label=""
+elif [ $percentage \> "99" ]; then
+    label=""
+fi
+
+timeToEmpty=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep 'time to empty' | cut -c26-)
+timeToFull=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep 'time to full' | cut -c26-)
+state=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep 'state' | cut -c26-)
+
+if [ $state == "discharging" ]; then
+    echo "$label$percentage ($timeToEmpty)"
+elif [ $state == "charging" ]; then
+    echo "$label$percentage ($timeToFull)"
+elif [ $state == "fully-charged" ]; then
+    echo "$percentage"
+fi

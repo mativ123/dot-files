@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+lightLevel=$(cat /sys/class/backlight/intel_backlight/brightness)
+test=$(calc $lightLevel*0.000833 | cut -c2-)
+result=${test%%.*}
+if [ $result == "99" ]; then
+    echo "100%"
+else
+    echo "$result%"
+fi
+
+case $BLOCK_BUTTON in
+    3) light -S 0;;
+    4) light -A 1;;
+    5) light -U 1;;
+esac
