@@ -34,17 +34,17 @@ markup=none
 # The second parameter overrides the mixer selection
 # See the script for details.
 
-[bandwidth]
-instance=wlo1;in
-command=bandwidth/bandwidth
-label=
-interval=1
+#[bandwidth]
+#instance=wlo1;in
+#command=bandwidth/bandwidth
+#label=
+#interval=1
 
-[ssid]
-command=ssid/ssid
-label=
-INTERFACE=wlo1
-interval=60
+#[ssid]
+#command=ssid/ssid
+#label=
+#INTERFACE=wlo1
+#interval=60
 
 [volume]
 command=volume/volume
@@ -52,14 +52,14 @@ interval=1
 signal=10
 #STEP=5%
 
-[backlight]
-command=backlight/backlight
-label=盛
-interval=1
+# [backlight]
+# command=backlight/backlight
+# label=盛
+# interval=1
 
-[battery]
-interval=1
-command=battery/battery
+#[battery]
+#interval=1
+#command=battery/battery
 
 # Memory usage
 #
@@ -69,11 +69,11 @@ label=
 command=memory/memory
 interval=1
 
-[memory]
-label=SWAP
-instance=swap
-separator=false
-interval=30
+#[memory]
+#label=SWAP
+#instance=swap
+#separator=false
+#interval=30
 
 # Disk usage
 #
@@ -82,48 +82,48 @@ interval=30
 # (defaults to 10 for 10%).
 [disk]
 label=HOME
-#DIR=/mnt/data
+# DIR=/
 interval=30
 
 # Network interface monitoring
 #
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
-[iface]
-#IFACE=wlan0
-color=#00FF00
-interval=10
-separator=false
-
-[wifi]
-INTERFACE=wlo1
-label=wifi0:
-#command=wifi/wifi
-interval=1
-separator=false
-
-# CPU usage
-#
-# The script may be called with -w and -c switches to specify thresholds,
-# see the script for details.
-[cpu_usage]
-label=CPU
-interval=10
-min_width=CPU 100.00%
+#[iface]
+##IFACE=wlan0
+#color=#00FF00
+#interval=10
 #separator=false
-
-[load_average]
-label=LOAD
-interval=10
-
-# Battery indicator
 #
-# The battery instance defaults to 0.
-[battery]
-label=BAT
-#label=⚡
-#command=battery/battery
-interval=30
+#[wifi]
+#INTERFACE=wlo1
+#label=wifi0:
+##command=wifi/wifi
+#interval=1
+#separator=false
+#
+## CPU usage
+##
+## The script may be called with -w and -c switches to specify thresholds,
+## see the script for details.
+#[cpu_usage]
+#label=CPU
+#interval=10
+#min_width=CPU 100.00%
+##separator=false
+#
+#[load_average]
+#label=LOAD
+#interval=10
+#
+## Battery indicator
+##
+## The battery instance defaults to 0.
+#[battery]
+#label=BAT
+##label=⚡
+##command=battery/battery
+#interval=30
 
 # Date Time
 [time]

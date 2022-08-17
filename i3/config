@@ -55,6 +55,13 @@ exec --no-startup-id shutter --min_at_startup
 # set background
 exec --no-startup-id feh --bg-fill ~/data/pics/moscow\ train.jpeg
 
+# wacom
+# set pressure
+exec --no-startup-id xsetwacom set "Wacom One by Wacom S Pen stylus" PressureCurve 40 100 40 100
+
+# start polybar at startup
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set 'Master' 2.5%+ && $refresh_i3status
@@ -187,6 +194,9 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 for_window [class=".*"] border pixel 0
+for_window [class="^.*"] border pixel 3
+
+default_orientation horizontal
 
 gaps outer 0
 gaps inner 5
@@ -222,39 +232,39 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-bar {
-    output HDMI-0
-    i3bar_command i3bar --transparency
-    status_command i3status
+# bar {
+#     output HDMI-0
+#     i3bar_command i3bar --transparency
+#     status_command i3blocks
+# 
+#     font pango:Arial 15
+# 
+#     colors {
+#         background #282c34fa
+#         statusline #979eab
+# 
+#         focused_workspace #61afef #61afef #282c34
+#         active_workspace #e5c07b #e5c07b #282c34
+#         inactive_workspace #282c34fa #282c34fa #979eab
+#         urgent_workspace #e06c75 #e06c75 #282c34
+#     }
+# }
 
-    font pango:Arial 15
-
-    colors {
-        background #282c34fa
-        statusline #979eab
-
-        focused_workspace #61afef #61afef #282c34
-        active_workspace #e5c07b #e5c07b #282c34
-        inactive_workspace #282c34fa #282c34fa #979eab
-        urgent_workspace #e06c75 #e06c75 #282c34
-    }
-}
-
-bar {
-    output DP-4
-    i3bar_command i3bar --transparency
-    status_command i3status
-    font pango:Arial 10
-    tray_output primary
-
-
-    colors {
-        background #282c34fa
-        statusline #979eab
-
-        focused_workspace #61afef #61afef #282c34
-        active_workspace #e5c07b #e5c07b #282c34
-        inactive_workspace #282c34fa #282c34fa #979eab
-        urgent_workspace #e06c75 #e06c75 #282c34
-    }
-}
+# bar {
+#     output DP-4
+#     i3bar_command i3bar --transparency
+#     status_command i3blocks
+#     font pango:Arial 10
+#     tray_output primary
+# 
+# 
+#     colors {
+#         background #282c34fa
+#         statusline #979eab
+# 
+#         focused_workspace #61afef #61afef #282c34
+#         active_workspace #e5c07b #e5c07b #282c34
+#         inactive_workspace #282c34fa #282c34fa #979eab
+#         urgent_workspace #e06c75 #e06c75 #282c34
+#     }
+# }
