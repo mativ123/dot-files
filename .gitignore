@@ -34,3 +34,6 @@
 
 !i3blocks/
 !i3blocks/**
+
+!polybar/
+!polybar/**
