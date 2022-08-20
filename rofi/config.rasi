@@ -1,6 +1,27 @@
 /** Basic config file **/
 
 configuration {
-  show-icons:         true;
-  icon-theme:         "Papirus";
+    modes: [ drun ];
+}
+
+window {
+    background-color: #282c34;
+
+}
+
+prompt {
+    background-color: #373B41;
+}
+
+inputbar {
+    background-color: #373B41;
+}
+
+element {
+    text-color: #979eab;
+    background-color: #373B41;
+}
+
+entry {
+    background-color: red;
 }
