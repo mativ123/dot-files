@@ -37,3 +37,6 @@
 
 !polybar/
 !polybar/**
+
+!lf/
+!lf/**

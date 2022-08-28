@@ -20,6 +20,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'bfrg/vim-cpp-modern'
 Plug 'Fymyte/rasi.vim'
 Plug 'ap/vim-css-color'
+Plug 'lervag/vimtex'
 " LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
