@@ -49,6 +49,7 @@ cmd open ${{
     case $(file --mime-type $f -b) in
         image/vnd.djvu|application/pdf|application/octet-stream|application/postscript) setsid -f zathura $fx >/dev/null 2>&1 ;;
         text/*|application/json|inode/x-empty) nvim $fx;;
+        text/md) glow $f;;
         image/*) feh . -Z.F -\| $f;;
         image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
         image/svg+xml) display -- $f ;;

@@ -21,6 +21,7 @@ Plug 'bfrg/vim-cpp-modern'
 Plug 'Fymyte/rasi.vim'
 Plug 'ap/vim-css-color'
 Plug 'lervag/vimtex'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 " LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
@@ -211,3 +212,27 @@ endfunction
 command! JbzCppMan :call s:JbzCppMan()
 
 au FileType cpp nnoremap <buffer>K :JbzCppMan<CR>
+
+# markdown
+let g:mkdp_auto_start = 1
+let g:mkdp_auto_close = 1
+let g:mkdp_refresh_slow = 0
+let g:mkdp_open_to_the_world = 1
+let g:mkdp_browser = 'firefox'
+
+let g:mkdp_preview_options = {
+    \ 'mkit': {},
+    \ 'katex': {},
+    \ 'uml': {},
+    \ 'maid': {},
+    \ 'disable_sync_scroll': 0,
+    \ 'sync_scroll_type': 'middle',
+    \ 'hide_yaml_meta': 1,
+    \ 'sequence_diagrams': {},
+    \ 'flowchart_diagrams': {},
+    \ 'content_editable': v:false,
+    \ 'disable_filename': 0,
+    \ 'toc': {}
+    \ }
+
+let g:mkdp_theme = 'dark'
