@@ -80,6 +80,7 @@ cmd dlfile %dlfile
 # Bindings
 map m
 map d
+map s
 
 map x cut
 map y copy

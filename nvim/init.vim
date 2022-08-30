@@ -73,6 +73,13 @@ set shortmess+=c
 set signcolumn=yes
 set mouse=nv
 
+" spell languages
+set spelllang=en,da
+
+" toggle spell check with F11
+nnoremap <silent> <F11> :set spell!<cr>
+inoremap <silent> <F11> <C-O>:set spell!<cr>
+
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
@@ -213,7 +220,7 @@ command! JbzCppMan :call s:JbzCppMan()
 
 au FileType cpp nnoremap <buffer>K :JbzCppMan<CR>
 
-# markdown
+" markdown
 let g:mkdp_auto_start = 1
 let g:mkdp_auto_close = 1
 let g:mkdp_refresh_slow = 0
