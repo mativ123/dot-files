@@ -76,6 +76,9 @@ set mouse=nv
 " spell languages
 set spelllang=en,da
 
+" spell sugestions limit
+set spellsuggest=best,9
+
 " toggle spell check with F11
 nnoremap <silent> <F11> :set spell!<cr>
 inoremap <silent> <F11> <C-O>:set spell!<cr>
@@ -243,3 +246,6 @@ let g:mkdp_preview_options = {
     \ }
 
 let g:mkdp_theme = 'dark'
+
+" vimtex
+let g:vimtex_view_method = 'zathura'
