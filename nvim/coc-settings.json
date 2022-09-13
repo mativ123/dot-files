@@ -7,19 +7,90 @@
   "languageserver": {
     "ccls": {
       "command": "ccls",
-      "args": ["--log-file=/tmp/ccls.log", "-v=1"],
-      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
-      "rootPatterns": [".ccls", "compile_commands.json"],
+      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp", "h"],
+      "rootPatterns": [".ccls-root", "build/compile_commands.json"],
       "initializationOptions": {
-         "cache": {
-           "directory": "/tmp/ccls"
-         },
-         "client": {
+        "cache": {
+          "directory": ".ccls-cache"
+        },
+        "client": {
           "snippetSupport": true
-         }
-       }
+        },
+        "compilationDatabaseDirectory": "build",
+        "clang": { 
+          "extraArgs": [ "-std=c++20" ] 
+        }
+      }
     }
-  }
+        "python": {
+        "command": "python",
+        "args": [
+          "-mpyls",
+          "-vv",
+          "--log-file",
+          "/tmp/lsp_python.log"
+        ],
+        "trace.server": "verbose",
+        "filetypes": [
+          "python"
+        ],
+        "settings": {
+          "pyls": {
+            "enable": true,
+            "trace": {
+              "server": "verbose"
+            },
+            "commandPath": "",
+            "configurationSources": [
+              "pycodestyle"
+            ],
+            "plugins": {
+              "jedi_completion": {
+                "enabled": true
+              },
+              "jedi_hover": {
+                "enabled": true
+              },
+              "jedi_references": {
+                "enabled": true
+              },
+              "jedi_signature_help": {
+                "enabled": true
+              },
+              "jedi_symbols": {
+                "enabled": true,
+                "all_scopes": true
+              },
+              "mccabe": {
+                "enabled": true,
+                "threshold": 15
+              },
+              "preload": {
+                "enabled": true
+              },
+              "pycodestyle": {
+                "enabled": true
+              },
+              "pydocstyle": {
+                "enabled": false,
+                "match": "(?!test_).*\\.py",
+                "matchDir": "[^\\.].*"
+              },
+              "pyflakes": {
+                "enabled": true
+              },
+              "rope_completion": {
+                "enabled": true
+              },
+              "yapf": {
+                "enabled": true
+              }
+            }
+          }
+        }
+      }  
+    }
+}
   "coc.source.OmniSharp.enable" : true,
   "coc.source.OmniSharp.triggerCharacters": ".",
 
@@ -30,6 +101,5 @@
     "onChange": true
   },
   // This is mandatory!
-  "highlight": { "lsRanges" : true }
 }
 

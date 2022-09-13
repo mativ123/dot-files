@@ -72,9 +72,9 @@ cmd mkfile %{{
     touch $ans
 }}
 
-cmd dragon %dragon -a -x $fx
-cmd dragon-stay %dragon -a $fx
-cmd dragon-individual %dragon $fx
+cmd dragon %dragon-drop -a -x $fx
+cmd dragon-stay %dragon-drop -a $fx
+cmd dragon-individual %dragon-drop $fx
 cmd dlfile %dlfile
 
 # Bindings
