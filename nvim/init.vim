@@ -8,8 +8,9 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'vim-syntastic/syntastic'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'SirVer/ultisnips'
@@ -22,12 +23,12 @@ Plug 'Fymyte/rasi.vim'
 Plug 'ap/vim-css-color'
 Plug 'lervag/vimtex'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'miyakogi/seiya.vim'
 " LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'onsails/lspkind-nvim'
-Plug 'prabirshrestha/vim-lsp'
-
+Plug 'prabirshrestha/vim-lsp' 
 Plug 'morhetz/gruvbox'
 Plug 'tlhr/anderson.vim'
 Plug 'AlessandroYorba/Alduin'
@@ -39,12 +40,17 @@ Plug 'glepnir/oceanic-material'
 Plug 'sts10/vim-pink-moon'
 Plug 'junegunn/seoul256.vim'
 Plug 'sainnhe/sonokai'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
 
 call plug#end()
 
-colorscheme sonokai
+colorscheme tokyonight-storm
+autocmd VimEnter * SeiyaDisable
+autocmd VimEnter * CHADopen
 highlight Normal guibg=none
-let g:airline_theme='bubblegum'
+let g:lightline = {'colorscheme': 'tokyonight'}
+" let g:airline_theme='bubblegum'
 
 let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier']
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
@@ -211,6 +217,7 @@ nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
 nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
+
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 set tabstop=4 softtabstop=4
