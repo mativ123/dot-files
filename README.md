@@ -3,3 +3,4 @@ Almost my entire [lf config](lf) is made by [Reikimann](https://github.com/Reiki
 
 # Screenshots
 ![screen1](screenshots/screen1.png)
+![screen2](screenshots/conky.png)
