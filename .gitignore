@@ -43,3 +43,6 @@
 
 !screenshots/
 !screenshots/**
+
+!conky/
+!conky/**
