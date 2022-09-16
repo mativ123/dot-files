@@ -49,6 +49,9 @@ exec --no-startup-id discord --start-minimized
 # start steam minimized
 exec --no-startup-id steam -silent --no-cef-sandbox
 
+# start conky
+exec --no-startup-id /home/mathias/.config/conky/startup.sh
+
 # start clipit at startup for clipboard preserverence
 exec --no-startup-id clipit -d
 
