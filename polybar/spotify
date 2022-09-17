@@ -3,6 +3,8 @@ song=$(dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/
 artist=$(dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:Metadata | sed -n '/artist/{n;n;p}' | cut -d '"' -f 2)
 status=$(dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:PlaybackStatus | cut -c26- | rev | cut -c2- | rev | head -2 | tail -1)
 
+song=${song% -*}
+
 if [ $status = "Playing" ]; then
     echo "%{F#61afef} $song %{F-}- $artist"
 elif [ $status = "Paused" ]; then 

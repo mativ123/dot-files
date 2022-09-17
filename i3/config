@@ -46,12 +46,6 @@ exec --no-startup-id picom
 # start discord
 exec --no-startup-id discord --start-minimized
 
-# start steam minimized
-exec --no-startup-id steam -silent --no-cef-sandbox
-
-# start conky
-exec --no-startup-id /home/mathias/.config/conky/startup.sh
-
 # start clipit at startup for clipboard preserverence
 exec --no-startup-id clipit -d
 
@@ -67,6 +61,12 @@ exec --no-startup-id xsetwacom set "Wacom One by Wacom S Pen stylus" PressureCur
 
 # start polybar at startup
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# start conky
+exec --no-startup-id /home/mathias/.config/conky/startup.sh
+
+# start steam minimized
+exec --no-startup-id steam -silent --no-cef-sandbox
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
