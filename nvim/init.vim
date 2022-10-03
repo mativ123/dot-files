@@ -25,6 +25,7 @@ Plug 'lervag/vimtex'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'miyakogi/seiya.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'tikhomirov/vim-glsl'
 " LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
@@ -48,7 +49,6 @@ call plug#end()
 
 colorscheme tokyonight-storm
 autocmd VimEnter * SeiyaDisable
-autocmd VimEnter * CHADopen
 highlight Normal guibg=none
 let g:lightline = {'colorscheme': 'tokyonight'}
 " let g:airline_theme='bubblegum'

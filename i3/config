@@ -201,7 +201,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 default_orientation horizontal
 
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border none
 
 gaps outer 0
 gaps inner 5
