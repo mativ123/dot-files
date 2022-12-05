@@ -27,6 +27,7 @@ Plug 'miyakogi/seiya.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tikhomirov/vim-glsl'
 Plug 'mfussenegger/nvim-dap'
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
 " LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
@@ -58,6 +59,7 @@ let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', '
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 let g:UltiSnipsExpandTrigger="<Right>"
 nmap <c-t> :FZF<CR>
+nmap <c-cr> :FloatermToggle<CR>
 
 let g:rainbow_active = 0
 
@@ -70,6 +72,8 @@ set spellsuggest=best,9
 " toggle spell check with F11
 nnoremap <silent> <F11> :set spell!<cr>
 inoremap <silent> <F11> <C-O>:set spell!<cr>
+
+set scrolloff=15
 
 " Some servers have issues with backup files, see #649.
 set nobackup
@@ -134,7 +138,7 @@ function! ShowDocumentation()
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)

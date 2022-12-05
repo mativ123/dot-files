@@ -85,7 +85,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec sh ~/.config/rofi/launchers/ribbon/launcher.sh
+bindsym $mod+d exec sh ~/.config/rofi/launchers/type-5/launcher.sh
 
 # toggle pause spotidy
 bindsym Mod1+Control+p exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
@@ -93,8 +93,11 @@ bindsym Mod1+Control+p exec dbus-send --print-reply --dest=org.mpris.MediaPlayer
 #snipping tool
 bindsym Shift+Print exec shutter -s
 
+#screenshots
+bindsym Print exec shutter -a
+
 #powermenu
-bindsym $mod+Shift+Escape exec sh ~/.config/rofi/powermenu/powermenu.sh
+bindsym $mod+Shift+Escape exec sh ~/.config/rofi/powermenu/type-2/powermenu.sh
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
