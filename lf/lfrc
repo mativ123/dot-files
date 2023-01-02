@@ -48,10 +48,11 @@ cmd open ${{
     test -L $f && f=$(readlink -f $f)
     case $(file --mime-type $f -b) in
         image/vnd.djvu|application/pdf|application/octet-stream|application/postscript) setsid -f zathura $fx >/dev/null 2>&1 ;;
+        image/gif) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+        image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
+        image/*) feh . -Z.F -\| $f;;
         text/*|application/json|inode/x-empty) nvim $fx;;
         text/md) glow $f;;
-        image/*) feh . -Z.F -\| $f;;
-        image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
         image/svg+xml) display -- $f ;;
         audio/*) mpv --audio-display=no $f ;;
         video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;

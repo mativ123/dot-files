@@ -26,7 +26,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'miyakogi/seiya.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tikhomirov/vim-glsl'
-Plug 'mfussenegger/nvim-dap'
+Plug 'puremourning/vimspector'
 Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
 " LSP
 Plug 'neovim/nvim-lspconfig'
@@ -290,3 +290,6 @@ let g:mkdp_theme = 'dark'
 
 " vimtex
 let g:vimtex_view_method = 'zathura'
+
+" vimspector
+let g:vimspector_enable_mappings = 'HUMAN'
