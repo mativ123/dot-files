@@ -53,7 +53,7 @@ exec --no-startup-id clipit -d
 exec --no-startup-id shutter --min_at_startup
 
 # set background
-exec --no-startup-id feh --bg-fill ~/data/pics/moscow\ train.jpeg
+exec --no-startup-id feh --bg-fill ~/data/pics/macro\ blank/macro\ dark.png
 
 # wacom
 # set pressure
