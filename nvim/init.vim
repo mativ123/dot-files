@@ -48,6 +48,8 @@ Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
 
 call plug#end()
 
+au BufNewFile,BufRead *.ejs set filetype=html
+
 colorscheme tokyonight-storm
 autocmd VimEnter * SeiyaDisable
 highlight Normal guibg=none

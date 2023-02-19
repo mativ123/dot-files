@@ -46,3 +46,6 @@
 
 !conky/
 !conky/**
+
+!fish/
+!fish/**
