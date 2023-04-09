@@ -49,3 +49,6 @@
 
 !fish/
 !fish/**
+
+nvim/.repro/
+nvim/.repro/**
