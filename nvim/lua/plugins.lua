@@ -11,4 +11,6 @@ return {
     "lervag/vimtex",
     {"iamcco/markdown-preview.nvim", build = "cd app && yarn install"},
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+    "lewis6991/gitsigns.nvim",
+    "numToStr/Comment.nvim",
 }

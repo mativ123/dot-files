@@ -1,3 +1,4 @@
+-- Lazi.vim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -13,13 +14,17 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
 
-require("prefs")
-require("coc")
--- add anything else here
+-- colorscheme
 vim.opt.termguicolors = true
--- do not remove the colorscheme!
 vim.cmd([[colorscheme tokyonight]])
 
+-- plugin setups
 require("lualine").setup()
+require('gitsigns').setup()
+require('Comment').setup()
 
+-- submodules
 require("mappings")
+require("prefs")
+require("coc")
+require("treesitter")
