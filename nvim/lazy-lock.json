@@ -1,5 +1,6 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "8d3aa5c22c2d45e788c7a5fe13ad77368b783c20" },
+  "barbar.nvim": { "branch": "master", "commit": "d2342eaea75f2432303a5c1aeeb0e12d8513d3d7" },
   "chadtree": { "branch": "chad", "commit": "f7d98de1e1c22b057248981bf531e8fa6132e225" },
   "coc.nvim": { "branch": "release", "commit": "bbaa1d5d1ff3cbd9d26bb37cfda1a990494c4043" },
   "gitsigns.nvim": { "branch": "main", "commit": "372d5cb485f2062ac74abc5b33054abac21d8b58" },
