@@ -1,22 +1,22 @@
 {
     "languageserver": {
-        "ccls": {
-            "command": "ccls",
-            "filetypes": ["c", "cpp", "cuda", "objc", "objcpp", "h"],
-            "rootPatterns": [".ccls-root", "build/compile_commands.json"],
-            "initializationOptions": {
-                    "cache": {
-                    "directory": ".ccls-cache"
-                },
-                "client": {
-                    "snippetSupport": true
-                },
-                "compilationDatabaseDirectory": "build",
-                "clang": { 
-                    "extraArgs": [ "-std=c++20" ] 
-                }
-            }
-        },
+        // "ccls": {
+        //     "command": "ccls",
+        //     "filetypes": ["c", "cpp", "cuda", "objc", "objcpp", "h"],
+        //     "rootPatterns": [".ccls-root", "build/compile_commands.json"],
+        //     "initializationOptions": {
+        //             "cache": {
+        //             "directory": ".ccls-cache"
+        //         },
+        //         "client": {
+        //             "snippetSupport": true
+        //         },
+        //         "compilationDatabaseDirectory": "build",
+        //         "clang": { 
+        //             "extraArgs": [ "-std=c++20" ] 
+        //         }
+        //     }
+        // },
         "rust": {
             "command": "rust-analyzer",
             "filetypes": ["rust"],
@@ -40,11 +40,11 @@
                 }
             }
         },
-        "arduino":{ 
-            "command":"./lsp/arduino-language-server/arduino-language-server",
+        "arduino": { 
+            "command":"/home/mathias/.config/nvim/lsp/arduino-language-server/arduino-language-server",
             "rootPatterns":["*.ino"],
             "filetypes":["arduino"],
-            "args":["-cli", "/path/to/arduino-cli", "-clangd", "/path/to/clangd", "-cli-config", "/path/to/arduino-cli.yaml"]
+            "args":["-cli", "/usr/bin/arduino-cli", "-clangd", "/home/mathias/.config/nvim/lsp/clangd", "-cli-config", "/home/mathias/.arduino15/arduino-cli.yaml", "-fqbn", "arduino:avr"]
         },
         // "csharp-ls": {
         //     "command": "csharp-ls",

@@ -1,3 +1,5 @@
+-- have to set leader before loading lazy
+vim.g.mapleader = " "
 -- Lazi.vim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
