@@ -21,7 +21,7 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "Iosevka Nerd Font 17";
+    font:                        "Iosevka Nerd Font 10";
 }
 
 /*****----- Main Window -----*****/
@@ -31,8 +31,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       60%;
-    height:                      70%;
+    width:                       800px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -42,7 +41,7 @@ window {
     padding:                     0px;
     border-radius:               20px;
     cursor:                      "default";
-    background-color:            #282c34;
+    background-color:            #22272C;
 }
 
 /*****----- Main Box -----*****/
@@ -93,7 +92,7 @@ entry {
 listview {
     enabled:                     true;
     columns:                     2;
-//  lines:                       15;
+    lines:                       10;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -122,19 +121,19 @@ element {
 }
 element normal.active {
     background-image:            linear-gradient(to right, #4C4F52, #2E343B);
-    text-color:                  #e5c07b;
+    text-color:                  #19B466;
 }
 element selected.normal {
     background-image:            linear-gradient(to right, #4C4F52, #2E343B);
-    text-color:                  #61afef;
+    text-color:                  #FF9030;
 }
 element selected.active {
     background-image:            linear-gradient(to right, #4C4F52, #2E343B);
-    text-color:                  #e06c75;
+    text-color:                  #EA5553;
 }
 element-icon {
     background-color:            transparent;
-    size:                        3%;
+    size:                        24px;
     cursor:                      inherit;
 }
 element-text {
@@ -162,7 +161,7 @@ button {
 }
 button selected {
     background-color:            inherit;
-    text-color:                  #61afef;
+    text-color:                  #FF9030;
 }
 
 /*****----- Message -----*****/
@@ -174,7 +173,7 @@ error-message {
 message {
     padding:                     0px;
     background-color:            inherit;
-    text-color:                  #61afef;
+    text-color:                  #FF9030;
 }
 textbox {
     padding:                     0px;

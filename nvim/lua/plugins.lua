@@ -14,4 +14,6 @@ return {
     "lewis6991/gitsigns.nvim",
     "numToStr/Comment.nvim",
     "romgrk/barbar.nvim",
+    "tmsvg/pear-tree",
+    "elkowar/yuck.vim",
 }

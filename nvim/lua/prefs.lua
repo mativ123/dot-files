@@ -15,3 +15,8 @@ vim.opt.wrap = false
 vim.opt.cursorline = true
 vim.opt.mouse = {a = true}
 vim.opt.compatible = false
+
+-- plugins
+-- vimtex
+vim.g.vimtex_view_method = "zathura"
+vim.g.maplocalleader = " "
