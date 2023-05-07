@@ -76,7 +76,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec sh ~/.config/rofi/launchers/type-2/launcher.sh
+bindsym $mod+d exec sh ~/.config/rofi/launchers/type-1/launcher.sh
 
 # toggle pause spotidy
 bindsym Mod1+Control+p exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
