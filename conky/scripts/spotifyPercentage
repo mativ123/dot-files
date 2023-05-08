@@ -1,0 +1,7 @@
+#!/bin/bash
+length=$(dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:Metadata | grep -A 1 "length" | tail -n 1 | cut -c43-)
+pos=$(dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:Position | tail -n 1 | cut -c24-)
+
+# printf "$((length / 2))"
+# echo "$pos/$length\n"
+echo "scale=2; $pos/$length" | bc -l

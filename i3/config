@@ -59,6 +59,9 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # start steam minimized
 exec --no-startup-id steam -silent --no-cef-sandbox
 
+#start conky
+exec --no-startup-id conky -q
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set 'Master' 2.5%+ && $refresh_i3status
